@@ -4,3 +4,6 @@ main: me.newdavis.stack.Stack
 authors: [ NewDavis ]
 description: Plugin um Items stacken zu können
 website: https://newdavis.me/
+
+commands:
+  nstack:

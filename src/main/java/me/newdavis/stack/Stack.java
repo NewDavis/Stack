@@ -1,17 +1,25 @@
 package me.newdavis.stack;
 
+import me.newdavis.command.StackCmd;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Stack extends JavaPlugin {
 
+    public static final String PREFIX = "§8» §b§lStack §8┃§7 ";
+
+    private static Stack instance;
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        instance = this;
+        Bukkit.getConsoleSender().sendMessage(PREFIX + "§aaktiviert");
 
+        new StackCmd();
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    public static Stack getInstance() {
+        return instance;
     }
+
 }
